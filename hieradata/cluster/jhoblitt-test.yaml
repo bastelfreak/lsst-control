@@ -5,3 +5,4 @@ cni::plugins::checksum: "962100bbc4baeaaa5748cdbfce941f756b1531c2eadb29012940149
 cni::plugins::enable: ["macvlan"]
 cni::plugins::version: "0.9.1"
 profile::core::common::manage_powertop: true
+profile::core::helm::version: "3.6.3"  # consistent with fleet 0.3.8
