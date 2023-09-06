@@ -32,14 +32,25 @@ describe "#{role} role" do
           it { is_expected.to contain_class('docker') }
 
           %w[
+            mate
+            profile::core::anaconda
             profile::core::common
             profile::core::debugutils
             profile::core::docker
             profile::core::docker::prune
             profile::core::ni_packages
+            profile::core::x2go
+            profile::ts::hexrot
+            profile::ts::nexusctio
           ].each do |c|
             it { is_expected.to contain_class(c) }
           end
+
+          it { is_expected.to contain_class('profile::core::anaconda').with_python_env_name('py311') }
+
+          it { is_expected.to contain_class('profile::core::anaconda').with_python_env_version('3.11') }
+
+          it { is_expected.to contain_class('profile::core::anaconda').with_conda_packages('[{"name"=>"pyside2", "channel"=>"conda-forge"}, {"name"=>"ts-m2gui", "channel"=>"lsstts"}]') }
 
           it { is_expected.to contain_package('docker-compose-plugin') }
         end # host
