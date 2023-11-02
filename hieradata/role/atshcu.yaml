@@ -15,6 +15,7 @@ ccs_hcu::canbus::version: "1.0.1.0"
 ccs_hcu::vldrive::module: "versaapi"
 ccs_hcu::vldrive::version: "1.5.0"
 
+ccs_hcu::imanager: true
 ccs_hcu::imanager::module: "imanager"
 ccs_hcu::imanager::version: "1.5.0"
 
