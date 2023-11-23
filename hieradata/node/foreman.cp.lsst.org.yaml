@@ -187,13 +187,17 @@ dhcp::pools:
       - "139.229.191.1 139.229.191.64"  # .65: dimm-laptop
       - "139.229.191.66 139.229.191.100"
     search_domains: "%{alias('dhcp::dnsdomain')}"
-  IT-Guess:
+  IT-Guest:
     network: "139.229.191.128"
     mask: "255.255.255.128"
     gateway: "139.229.191.254"
     range:
       - "139.229.191.129 139.229.191.239"
     search_domains: "%{alias('dhcp::dnsdomain')}"
+    nameservers:
+      - "1.0.0.1"
+      - "1.1.1.1"
+      - "8.8.8.8"
   IT-CCTV:
     network: "10.17.7.0"
     mask: "255.255.255.0"

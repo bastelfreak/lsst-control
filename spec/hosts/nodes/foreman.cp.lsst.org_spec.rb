@@ -263,11 +263,12 @@ describe 'foreman.cp.lsst.org', :sitepp do
       end
 
       it do
-        is_expected.to contain_dhcp__pool('IT-Guess').with(
+        is_expected.to contain_dhcp__pool('IT-Guest').with(
           network: '139.229.191.128',
           mask: '255.255.255.128',
           range: ['139.229.191.129 139.229.191.239'],
           gateway: '139.229.191.254',
+          nameservers: ['1.0.0.1', '1.1.1.1', '8.8.8.8'],
         )
       end
 
