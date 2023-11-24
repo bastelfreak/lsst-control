@@ -8,7 +8,7 @@ profile::core::convenience::packages:
   - "neovim"
   - "parallel"
   - "rsync"
-  - "screen"
+#  - "screen" not available on EL8
   - "tree"
   - "vim"
 profile::core::debugutils::packages:
