@@ -28,8 +28,8 @@ profile::core::yum::versionlock:
     release: "1.el8"
     before: "Package[puppetdb-termini]"
 
-foreman::repo::repo: "3.8"
-foreman::version: "3.8.0"
+foreman::repo::repo: "3.9"
+foreman::version: "3.9.1"
 puppetdb::globals::version: '7.16.0'
 
 profile::core::common::manage_sssd: false
